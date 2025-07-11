@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Especializados para Elaboración de PTO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .accordion-header {
+            transition: background-color 0.3s ease;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+            padding: 0 1.5rem;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px; /* Adjust as needed */
+            padding: 1.5rem;
+        }
+        .accordion-item.active .accordion-header {
+            background-color: #0d9488;
+            color: white;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Chosen Palette: Warm Neutrals (Stone) with a Teal accent for highlights. -->
+    <!-- Application Structure Plan: This version uses a vertical accordion structure to focus entirely on the four phases. The user is presented with a clean, stacked list of the phases. Clicking on any phase header expands its content (description, activities, deliverables) while collapsing any other open phase. This design is highly focused, minimizes initial cognitive load, and provides a clear, step-by-step exploration path. It directly addresses the user's request to be "more focused on showing the phases" by making them the primary interactive element. The technology showcase section is retained at the end as a supporting value proposition. -->
+    <!-- Visualization & Content Choices: 
+        1. Accordion (Phases): Goal: Organize/Navigate. Method: Interactive styled HTML/CSS accordion. Interaction: Click to expand/collapse content sections. Justification: A classic, effective UI pattern for presenting sequential or categorical information without clutter. It forces user focus on one topic at a time.
+        2. Phase Details (Text): Goal: Inform. Method: Dynamically revealed text blocks within each accordion panel. Interaction: Appear/disappear on click. Justification: Presents detailed information in a structured, digestible format upon user request.
+        3. Tech Advantages: Goal: Inform/Highlight. Method: Grid layout with Unicode icons and text. Interaction: Static. Justification: Clearly isolates and emphasizes key value propositions after the user has reviewed the core service offerings.
+        4. No Chart: The doughnut chart has been removed as per user request to simplify and focus the presentation. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-teal-700 mb-2">Servicios Especializados para la Elaboración del PTO</h1>
+            <p class="max-w-3xl mx-auto text-stone-600">Un enfoque integral y tecnológico para la formulación de su Programa de Trabajos y Obras, garantizando el cumplimiento normativo y la viabilidad de su proyecto minero.</p>
+        </header>
+
+        <main>
+            <section id="phases-accordion" class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-center text-stone-700 mb-8">Nuestro Proceso Detallado por Fases</h2>
+                <div class="space-y-4">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item bg-white border border-stone-200 rounded-lg shadow-sm overflow-hidden">
+                        <div class="accordion-header cursor-pointer flex justify-between items-center p-6">
+                            <h3 class="text-xl font-semibold">
+                                <span class="text-teal-600 mr-3">1.</span> Exploración Geológica de Superficie
+                            </h3>
+                            <span class="accordion-icon text-2xl font-light transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="accordion-content bg-stone-50 border-t border-stone-200">
+                            <p class="mb-6 text-stone-600">Esta fase fundamental sienta las bases de todo el proyecto, transformando un área de interés en un prospecto geológico con potencial definido. Caracterizamos la geología superficial para establecer una hipótesis de trabajo sólida y optimizar las fases de exploración subsecuentes.</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Actividades Clave</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Revisión Bibliográfica y Documental</li>
+                                        <li>Topografía de Alta Precisión con LiDAR</li>
+                                        <li>Cartografía Geológica Detallada</li>
+                                        <li>Prospección Geofísica (TRE y SEV)</li>
+                                        <li>Muestreo Geoquímico Sistemático</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Entregables Principales</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Documento síntesis del estado del arte</li>
+                                        <li>Cartografía base de alta resolución</li>
+                                        <li>Mapas y perfiles geológicos</li>
+                                        <li>Secciones y mapas de anomalías geofísicas</li>
+                                        <li>Mapas de anomalías geoquímicas</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item bg-white border border-stone-200 rounded-lg shadow-sm overflow-hidden">
+                        <div class="accordion-header cursor-pointer flex justify-between items-center p-6">
+                            <h3 class="text-xl font-semibold">
+                                <span class="text-teal-600 mr-3">2.</span> Exploración Geológica del Subsuelo
+                            </h3>
+                            <span class="accordion-icon text-2xl font-light transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="accordion-content bg-stone-50 border-t border-stone-200">
+                            <p class="mb-6 text-stone-600">El objetivo de esta fase es verificar y refinar el modelo geológico propuesto en la Fase I. Buscamos delimitar la geometría y continuidad de la mineralización en el subsuelo con un mayor nivel de confianza, utilizando métodos directos e indirectos.</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Actividades Clave</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Exploración Directa (Apiques, Trincheras)</li>
+                                        <li>Perforación Exploratoria (Corazonada/RC)</li>
+                                        <li>Logueo Geológico y Geotécnico Detallado</li>
+                                        <li>Muestreo y Análisis de Calidad (con QA/QC)</li>
+                                        <li>Estudios Geotécnicos e Hidrogeológicos Preliminares</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Entregables Principales</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Perfiles y análisis de excavaciones</li>
+                                        <li>Bases de datos de perforación completas</li>
+                                        <li>Base de datos de ensayos validada y reporte QA/QC</li>
+                                        <li>Informe preliminar de parámetros geomecánicos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item bg-white border border-stone-200 rounded-lg shadow-sm overflow-hidden">
+                        <div class="accordion-header cursor-pointer flex justify-between items-center p-6">
+                            <h3 class="text-xl font-semibold">
+                                <span class="text-teal-600 mr-3">3.</span> Evaluación y Modelo Geológico
+                            </h3>
+                            <span class="accordion-icon text-2xl font-light transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="accordion-content bg-stone-50 border-t border-stone-200">
+                            <p class="mb-6 text-stone-600">Esta es la fase de síntesis. Integramos toda la información recopilada para construir un modelo geológico tridimensional robusto. Aquí realizamos la primera estimación y clasificación de los Recursos Minerales del yacimiento conforme al estándar ECRR.</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Actividades Clave</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Integración e Interpretación de Datos</li>
+                                        <li>Construcción del Modelo 3D (Wireframes, Modelo de Bloques)</li>
+                                        <li>Análisis Geoestadístico</li>
+                                        <li>Estimación y Clasificación de Recursos Minerales</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Entregables Principales</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Informe de interpretación geológica integrada</li>
+                                        <li>Modelo geológico y de bloques 3D del yacimiento</li>
+                                        <li>Reporte de Estimación de Recursos Minerales (ECRR)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Accordion Item 4 -->
+                    <div class="accordion-item bg-white border border-stone-200 rounded-lg shadow-sm overflow-hidden">
+                        <div class="accordion-header cursor-pointer flex justify-between items-center p-6">
+                            <h3 class="text-xl font-semibold">
+                                <span class="text-teal-600 mr-3">4.</span> Formulación del Programa de Trabajos y Obras (PTO)
+                            </h3>
+                            <span class="accordion-icon text-2xl font-light transition-transform duration-300">▼</span>
+                        </div>
+                        <div class="accordion-content bg-stone-50 border-t border-stone-200">
+                            <p class="mb-6 text-stone-600">Con una estimación de recursos robusta, esta fase final consiste en realizar el estudio de factibilidad que demuestra la viabilidad técnica y económica del proyecto. Convertimos Recursos en Reservas Minerales y consolidamos toda la información en el documento PTO.</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Actividades Clave</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Análisis de Factores Modificadores (Minería, Procesamiento, etc.)</li>
+                                        <li>Estudio de mercado y análisis financiero</li>
+                                        <li>Estimación de Reservas Minerales (ECRR)</li>
+                                        <li>Desarrollo de Plan de Manejo Ambiental (PMA)</li>
+                                        <li>Elaboración y consolidación del documento PTO</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-2 text-stone-700">Entregables Principales</h4>
+                                    <ul class="list-disc list-inside space-y-2 text-stone-600">
+                                        <li>Declaración de Reservas Minerales (ECRR)</li>
+                                        <li>Modelo financiero detallado (CAPEX, OPEX, VPN, TIR)</li>
+                                        <li>Planes mineros, de obras y de cierre</li>
+                                        <li>Documento final del PTO para presentación a la ANM</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-16 text-center bg-teal-600 text-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4">Nuestra Ventaja Tecnológica</h2>
+                <p class="max-w-2xl mx-auto mb-8">Integramos tecnologías avanzadas para incrementar la eficiencia, reducir la incertidumbre y construir modelos geológicos más confiables desde etapas tempranas.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-teal-700 p-6 rounded">
+                        <h3 class="font-semibold text-xl mb-2">📡 LiDAR Aéreo</h3>
+                        <p>Para levantamientos topográficos rápidos y de alta densidad que superan las dificultades de la vegetación, generando MDT precisos esenciales para el diseño de mina y la gestión de aguas.</p>
+                    </div>
+                    <div class="bg-teal-700 p-6 rounded">
+                        <h3 class="font-semibold text-xl mb-2">📈 Geofísica Eléctrica (TRE y SEV)</h3>
+                        <p>Para "ver" el subsuelo antes de perforar, permitiendo optimizar la localización de sondeos, reducir costos y validar el modelo geológico de forma no invasiva.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-stone-200">
+            <p class="text-stone-600 font-semibold">Contáctenos</p>
+            <p class="text-stone-500">Listos para evaluar su proyecto y asegurar el éxito de su Programa de Trabajos y Obras.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            // Set the first item to be active by default
+            if (accordionItems.length > 0) {
+                accordionItems[0].classList.add('active');
+            }
+
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    const currentlyActive = document.querySelector('.accordion-item.active');
+                    if (currentlyActive && currentlyActive !== item) {
+                        currentlyActive.classList.remove('active');
+                    }
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
